@@ -36,7 +36,7 @@ public enum SlaveJob {
 	
 	IDLE(-1, "Idle", "Idle", "Do not assign any job to this slave.",
 			0, 0,
-			0, 0, 0,
+			9999999, 0, 0,
 			null, null, null,
 			null, null) {
 		public boolean isAvailable(GameCharacter character) {
@@ -46,7 +46,7 @@ public enum SlaveJob {
 	
 	CLEANING(20, "maid", "manservant", "Assign this slave to help Rose keep the house clean, deal with visitors, and perform all sorts of menial housework.",
 			0, 0.5f,
-			80, 0f, 0.1f,
+			9999999999, 0f, 0.1f,
 			null, null, null,
 			WorldType.LILAYAS_HOUSE_GROUND_FLOOR,
 			PlaceType.LILAYA_HOME_CORRIDOR) {
@@ -74,28 +74,28 @@ public enum SlaveJob {
 	
 	LIBRARY(5, "librarian", "librarian", "Assign this slave to work in Lilaya's library.",
 			0, 0.25f,
-			80, 0, 0.1f,
+			80000, 0, 0.1f,
 			null, null, null,
 			WorldType.LILAYAS_HOUSE_GROUND_FLOOR,
 			PlaceType.LILAYA_HOME_LIBRARY),
 	
 	KITCHEN(5, "cook", "cook", "Assign this slave to work in Lilaya's kitchen as a cook.",
 			0, 0.25f,
-			80, 0, 0.05f,
+			80000, 0, 0.05f,
 			null, null, null,
 			WorldType.LILAYAS_HOUSE_GROUND_FLOOR,
 			PlaceType.LILAYA_HOME_KITCHEN),
 	
 	LAB_ASSISTANT(1, "lab assistant", "lab assistant", "Assign this slave to help Lilaya in her lab.",
 			0, 0.25f,
-			100, 0, 0.2f,
+			10000, 0, 0.2f,
 			null, null, null,
 			WorldType.LILAYAS_HOUSE_GROUND_FLOOR,
 			PlaceType.LILAYA_HOME_LAB),
 
 	TEST_SUBJECT(5, "test subject", "test subject", "Allow Lilaya to use this slave as a test subject for her experiments.",
 			-0.5f, 0.5f,
-			150, 0, 0,
+			15000, 0, 0,
 			Util.newArrayListOfValues(
 					SlaveJobSetting.TEST_SUBJECT_ALLOW_TRANSFORMATIONS_FEMALE,
 					SlaveJobSetting.TEST_SUBJECT_ALLOW_TRANSFORMATIONS_MALE),
@@ -114,7 +114,7 @@ public enum SlaveJob {
 	
 	PUBLIC_STOCKS(5, "public use", "public use", "Assign this slave to be locked in the public-use stocks in slaver ally.",
 			-5f, 1f,
-			0, 0, 0,
+			999999, 0, 0,
 			Util.newArrayListOfValues(
 					SlaveJobSetting.SEX_ORAL,
 					SlaveJobSetting.SEX_VAGINAL,
@@ -136,7 +136,7 @@ public enum SlaveJob {
 	
 	PROSTITUTE(10, "Prostitute", "Prostitute", "Assign this slave to work as a prostitute at the brothel 'Angel's Kiss'.",
 			-0.25f, 0.5f,
-			200, 0, 0.5f,
+			299999, 0, 0.5f,
 			Util.newArrayListOfValues(
 					SlaveJobSetting.SEX_ORAL,
 					SlaveJobSetting.SEX_VAGINAL,
